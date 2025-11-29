@@ -11,7 +11,6 @@ const ParticularScreen = ({ route }) => {
   const [error, setError] = useState('');
 
   // Finnhub API key (store securely in production, e.g., using react-native-dotenv)
-  //const FINNHUB_API_KEY = 'co2qok1r01qp2simakvgco2qok1r01qp2simal00'; // Replace with your API key
   const FINNHUB_API_KEY = Constants.expoConfig?.extra?.finnhubApiKey;
 
   useEffect(() => {

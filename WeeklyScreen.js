@@ -52,8 +52,6 @@ const WeeklyScreen = () => {
   const [refreshKey, setRefreshKey] = useState(0);
   const navigation = useNavigation();
 
-  //const FINNHUB_API_KEY = 'co2qok1r01qp2simakvgco2qok1r01qp2simal00';
-  //const ALPHA_VANTAGE_API_KEY = 'S8XWTJTKR8KA9K0W';
   const FINNHUB_API_KEY = Constants.expoConfig?.extra?.finnhubApiKey;
   const ALPHA_VANTAGE_API_KEY = Constants.expoConfig?.extra?.alphaVantageApiKey;
 

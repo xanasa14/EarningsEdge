@@ -1,15 +1,19 @@
 // app.config.js
-import 'dotenv/config'; // ← This single line loads your .env file
+import 'dotenv/config';
 
 export default {
-  name: "YourAppName",
-  slug: "your-app-slug",
+  name: "EarningsEdge",
+  slug: "earningsedge",
   version: "1.0.0",
-  // ... keep any other fields you already have (orientation, icon, etc.)
-
+  orientation: "portrait",
+  ios: {
+    bundleIdentifier: "com.xaviernavarro.earningsedge"
+  },
+  android: {
+    package: "com.xaviernavarro.earningsedge"
+  },
   extra: {
-    // This will use your real key from .env when developing
-    // Falls back to a dummy if .env is missing (safe for GitHub)
-    finnhubApiKey: process.env.FINNHUB_API_KEY || 'dummy-key-for-github',
+    finnhubApiKey: process.env.FINNHUB_API_KEY || 'dummy-finnhub',
+    alphaVantageApiKey: process.env.ALPHA_VANTAGE_API_KEY || 'dummy-alpha', // ← just add this line
   },
 };

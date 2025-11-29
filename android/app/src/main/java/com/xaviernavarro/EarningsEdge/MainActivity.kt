@@ -1,4 +1,4 @@
-package com.xaviernavarro.EarningsEdge
+package com.xaviernavarro.earningsedge
 
 import android.os.Build
 import android.os.Bundle
