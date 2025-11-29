@@ -6,6 +6,7 @@ import pLimit from 'p-limit';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import ProgressBar from 'react-native-progress/Bar';
 import SpeedGauge from './Components/SpeedGauge';
+import Constants from 'expo-constants';
 
 let TICKERS = ['OPCH', 'CRWD', 'MDB', 'ORCL', 'ADBE', 'SOFI', 'OXY', 'PEP', 'C', 'LLY', 'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA', 'NVDA', 'META', 'JPM', 'JNJ', 'PFE', 'WMT', 'XOM', 'KO', 'DIS', 'NKE', 'MCD', 'HD', 'IBM', 'CVX', 'UNH', 'BRK.B', 'BAC', 'NFLX', 'GE', 'BA', 'CAT', 'PG', 'NEE', 'ECL', 'DD', 'AMT', 'PLD', 'SPG', 'DUK', 'AEP', 'AXP'];
 
@@ -25,7 +26,6 @@ const ECONOMIC_RELEASE_DATES_2025 = [
 
 // American flag logo for CPI/PPI
 const US_FLAG_LOGO = 'https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/320px-Flag_of_the_United_States.svg.png';
-
 // Limit to 2 concurrent requests to avoid rate limits
 const limit = pLimit(2);
 
@@ -52,8 +52,10 @@ const WeeklyScreen = () => {
   const [refreshKey, setRefreshKey] = useState(0);
   const navigation = useNavigation();
 
-  const FINNHUB_API_KEY = 'co2qok1r01qp2simakvgco2qok1r01qp2simal00';
-  const ALPHA_VANTAGE_API_KEY = 'S8XWTJTKR8KA9K0W';
+  //const FINNHUB_API_KEY = 'co2qok1r01qp2simakvgco2qok1r01qp2simal00';
+  //const ALPHA_VANTAGE_API_KEY = 'S8XWTJTKR8KA9K0W';
+  const FINNHUB_API_KEY = Constants.expoConfig?.extra?.finnhubApiKey;
+  const ALPHA_VANTAGE_API_KEY = Constants.expoConfig?.extra?.alphaVantageApiKey;
 
   const loadCachedData = async (key) => {
     try {
