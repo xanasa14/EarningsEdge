@@ -22,7 +22,7 @@
     "expo-system-ui": "~5.0.10",
     "p-limit": "^6.2.0",
     "react": "19.0.0",
-    "react-native": "0.79.5",
+    "react-native": "0.79.6",
     "react-native-circular-progress": "^1.4.1",
     "react-native-gifted-charts": "^1.4.63",
     "react-native-linear-gradient": "^2.8.3",

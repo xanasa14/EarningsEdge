@@ -87,13 +87,13 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.xaviernavarro.earningsedge'
+    namespace 'com.xaviernavarro.earningsedge2'
     defaultConfig {
-        applicationId 'com.xaviernavarro.earningsedge'
+        applicationId 'com.xaviernavarro.earningsedge2'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "1.0.0"
+        versionName "1.0.1"
     }
     signingConfigs {
         debug {
